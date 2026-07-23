@@ -1,0 +1,282 @@
+<!--
+  TEAM PAGE TEMPLATE
+
+  HOW TO USE
+  1. Copy this file and rename it, for example: Menu.html or About.html.
+  2. Update the <title>, meta description and <body data-page="..."> value.
+  3. In both navigation menus, add the "active" class only to the current page link.
+  4. Replace everything between PAGE CONTENT START and PAGE CONTENT END.
+  5. Keep the top banner, header, footer, css/styles.css link and js/app.js link unchanged.
+
+  DESIGN RULE
+  Use the existing classes from css/styles.css before writing new CSS. This keeps every page
+  consistent with the JMB Coffee visual system.
+-->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="[Describe this page in one clear sentence for search engines.]"
+    />
+    <title>[Page Name] | JMB Coffee</title>
+
+    <!-- Global design system: keep this on every page. -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Optional page-only styles. Keep selectors scoped to this page's data-page value. -->
+    <link rel="stylesheet" href="css/page-template.css" />
+  </head>
+  <body data-page="template">
+    <div class="page-shell">
+      <!-- Shared top banner: keep consistent across all pages. -->
+      <div class="top-banner">
+        🎉 OPENING SPECIAL: USE CODE "JMBCRAFT" FOR 20% OFF COFFEE MICRO-LOTS
+      </div>
+
+      <!-- Shared site header: only change which nav link has the "active" class. -->
+      <header class="site-header">
+        <div class="container navbar">
+          <button class="brand" data-route="home" aria-label="JMB Coffee Home">
+            <span class="brand-mark">
+              ☕
+              <span class="brand-ping"></span>
+            </span>
+            <span>
+              <span class="brand-title">
+                JMB
+                <span>Coffee</span>
+              </span>
+              <span class="brand-subtitle">Est. 2026 • Premium Roastery</span>
+            </span>
+          </button>
+
+          <!-- Desktop navigation -->
+          <nav class="nav-links" aria-label="Main navigation">
+            <button class="nav-link" data-route="home">Home</button>
+            <button class="nav-link" data-route="menu">Our Menu</button>
+            <button class="nav-link" data-route="customizer">Brew Lab 🧪</button>
+            <button class="nav-link" data-route="about">Our Story</button>
+            <button class="nav-link" data-route="contact">Contact & Finder</button>
+          </nav>
+
+          <div class="nav-actions">
+            <button class="nav-cta" data-route="customizer">✨ Customize Cup</button>
+          </div>
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+
+        <!-- Mobile navigation: keep its active link matched with the desktop navigation. -->
+        <div class="mobile-panel" id="mobile-panel">
+          <button class="nav-link" data-route="home">Home</button>
+          <button class="nav-link" data-route="menu">Our Menu</button>
+          <button class="nav-link" data-route="customizer">Brew Lab 🧪</button>
+          <button class="nav-link" data-route="about">Our Story</button>
+          <button class="nav-link" data-route="contact">Contact & Finder</button>
+          <button class="nav-cta" data-route="customizer">✨ Craft Your Custom Cup</button>
+        </div>
+      </header>
+
+      <!-- ==================== PAGE CONTENT START ==================== -->
+      <main id="main-content">
+        <!--
+          PAGE HERO
+          Replace the label, heading, description and CTA. The existing hero classes preserve the
+          JMB Coffee gradient, spacing and typography.
+        -->
+        <section class="hero">
+          <div class="container narrow">
+            <div class="center-heading">
+              <span class="eyebrow">[Page Category]</span>
+              <h1 class="heading-xl">
+                [Your Page]
+                <span class="gradient-text">Headline</span>
+              </h1>
+              <p class="text-muted">
+                Write a short introduction that explains what this page offers and why it matters to
+                the guest.
+              </p>
+              <div class="button-row" style="justify-content: center">
+                <a class="btn btn-primary" href="#page-content">Primary Action</a>
+                <a class="btn btn-dark" href="#next-section">Secondary Action</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!--
+          SECTION PATTERN: Centered heading + three cards
+          Duplicate, remove or replace this whole section as needed. Use .card-grid and .info-card
+          for consistent cards; the responsive layout is already included in styles.css.
+        -->
+        <section class="section" id="page-content">
+          <div class="container">
+            <div class="center-heading">
+              <span class="eyebrow">[Section Label]</span>
+              <h2 class="heading-lg">A Clear Section Heading</h2>
+              <p class="text-muted">
+                Add a short supporting sentence. Keep it concise so the heading stays the focus.
+              </p>
+            </div>
+
+            <div class="card-grid">
+              <article class="info-card">
+                <div class="icon-box">01</div>
+                <h3>First Content Block</h3>
+                <p>
+                  Replace this card with your own feature, service, product detail, policy or story.
+                </p>
+              </article>
+
+              <article class="info-card">
+                <div class="icon-box">02</div>
+                <h3>Second Content Block</h3>
+                <p>
+                  Keep heading and paragraph lengths similar across cards for a balanced layout.
+                </p>
+              </article>
+
+              <article class="info-card">
+                <div class="icon-box">03</div>
+                <h3>Third Content Block</h3>
+                <p>
+                  Use the existing components first; add scoped CSS only when a new pattern is
+                  needed.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!--
+          SECTION PATTERN: Dark content area
+          This is useful for a process, story, form, feature highlight or custom component.
+          Keep new page-specific styles scoped under [data-page="your-page"] in its CSS file.
+        -->
+        <section class="section section-dark" id="next-section">
+          <div class="container narrow">
+            <article class="form-card">
+              <span class="eyebrow">[Optional Highlight]</span>
+              <h2 class="heading-lg" style="margin-top: 0.75rem">Build Your Custom Section Here</h2>
+              <p class="text-muted">
+                This ready-made panel is a safe place to write your own HTML, add a form, insert a
+                list, connect your JavaScript, or replace it with another existing component.
+              </p>
+
+              <!-- TEAM: Add your page-specific markup here. -->
+              <div class="form-grid" style="margin-top: 1.5rem">
+                <div class="form-group">
+                  <span class="form-label">Content Area One</span>
+                  <div class="form-control">Replace with your component or information.</div>
+                </div>
+                <div class="form-group">
+                  <span class="form-label">Content Area Two</span>
+                  <div class="form-control">Keep using existing tokens, buttons and cards.</div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!--
+          CTA PATTERN
+          Reuse this at the end of a page when you want a clear next action.
+        -->
+        <section class="section">
+          <div class="container">
+            <div class="cta-block">
+              <div class="cta-inner">
+                <span class="eyebrow">[Next Step]</span>
+                <h2 class="heading-lg">Finish with One Clear Call to Action</h2>
+                <p class="text-muted">
+                  Change this copy and destination to guide the visitor to the next relevant page.
+                </p>
+                <a class="btn btn-primary" href="#main-content">Your CTA Label</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- ===================== PAGE CONTENT END ===================== -->
+
+      <!-- Shared footer: keep consistent across all pages. -->
+      <footer class="site-footer" id="footer-section">
+        <div class="container">
+          <div class="footer-grid">
+            <div>
+              <button class="brand" data-route="home">
+                <span class="brand-mark">☕</span>
+                <span>
+                  <span class="brand-title">
+                    JMB
+                    <span>Coffee</span>
+                  </span>
+                  <span class="brand-subtitle">Est. 2026 • Micro Roastery</span>
+                </span>
+              </button>
+              <p class="footer-text">
+                We source single-origin specialty grades directly from independent farms,
+                micro-roasting in small batches to preserve original terroir sweetness. Perfecting
+                your daily ritual.
+              </p>
+              <div class="socials">
+                <a class="social-link" href="#instagram">IG</a>
+                <a class="social-link" href="#facebook">FB</a>
+                <a class="social-link" href="#twitter">X</a>
+              </div>
+            </div>
+
+            <div class="footer-columns">
+              <div>
+                <h4 class="footer-title">Discover</h4>
+                <ul class="footer-list">
+                  <li><button data-route="home">Home Base</button></li>
+                  <li><button data-route="menu">Our Handcrafted Menu</button></li>
+                  <li><button data-route="customizer">Interactive Brew Lab 🧪</button></li>
+                  <li><button data-route="about">Our Roastery Story</button></li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="footer-title">Legal & Support</h4>
+                <ul class="footer-list">
+                  <li><button data-route="contact">Find JMB Stores</button></li>
+                  <li><button data-route="contact">Contact Validation HQ</button></li>
+                  <li><span>Privacy Shield</span></li>
+                  <li><span>Sitemap Registry</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="newsletter">
+              <h4 class="footer-title">Join the JMB Journal</h4>
+              <p class="footer-text">
+                Subscribe to unlock special micro-lot drops, brewing manuals, and secret lab
+                recipes.
+              </p>
+              <form class="newsletter-form" id="newsletter-form" novalidate>
+                <div class="newsletter-row">
+                  <input id="newsletter-email" type="email" placeholder="name@domain.com" />
+                  <button aria-label="Subscribe">→</button>
+                </div>
+                <p id="newsletter-status"></p>
+              </form>
+            </div>
+          </div>
+
+          <div class="footer-bottom">
+            <p>© 2026 JMB Coffee Roastery Co. All rights reserved.</p>
+            <p>BIBWB1114 Web Design Assignment Submission • Semester May 2026</p>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Shared functionality: navigation, mobile menu and newsletter. Keep on all pages. -->
+    <script src="script.js" defer></script>
+
+    <!-- Optional page-only functionality. Copy and rename with this HTML file if needed. -->
+    <script src="page-template.js" defer></script>
+  </body>
+</html>

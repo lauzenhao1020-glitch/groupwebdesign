@@ -1,0 +1,17 @@
+/*
+  PAGE-SPECIFIC CSS STARTER
+
+  Copy and rename this file with Page-Template.html, for example:
+  - Menu.html
+  - css/menu.css
+
+  Keep css/styles.css as the global JMB Coffee design system.
+  Add new selectors only when an existing shared class cannot serve the component.
+  Scope selectors to the page's body data-page value so styles cannot affect other pages.
+
+  Example:
+
+  body[data-page='menu'] .menu-feature {
+    // Your page-only styles here.
+  }
+*/
